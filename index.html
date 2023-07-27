@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>Employee Portal</title>
+    <link type="text/css" rel="stylesheet" href="style.css"
+</head>
+
+<body>
+<h1>Employee Portal</h1>
+    <table>
+        <tr>
+            <td>
+                <label for="emp_id"></label><br>
+                
+                <input type="text" name="id" id="emp_id" placeholder="Employee ID">
+                <br>
+                <span id="id-error"></span>
+                <br>
+                        <label for="emp_name"></label><br>
+                        <input type="text" name="name" id="emp_name" placeholder="Employee Name">
+                        <br>
+                        <span id="name-error"></span> 
+                    <br>
+                        <label for="age"></label><br>
+                        <input type="number" name="age" id="emp_age" placeholder="Employee Age">
+                        <br>
+                        <span id="age-error"></span>
+                    <br>
+                        <label for="designation"></label><br>
+                        <select name="desig" id="emp_designation">
+                            <option value="" disabled selected>Select Designation</option>
+                            <option value="Developer">Developer</option>
+                            <option value="HR">HR</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Tester">Tester</option>
+                        </select>
+                        <br>
+                        <span id="designation-error"></span>
+                    <br>
+                        <label for="url"></label><br>
+                        <input type="text" name="url" id="emp_url" placeholder="Profile Photo">
+                        <br>
+                        <span id="url-error"></span>
+                    <br>
+                        <label for="gender"></label><br>
+                        <select name="gender" id="emp_gender">
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    <br>
+                    <span id="gender-error"></span>
+                    <br>
+                    <div class="form_action--button" onclick="onFormSubmit()">
+                        <input type="submit" value="Add">
+                    </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="second_container">
+        
+        <table class="list" id="storeList">
+            <caption>Employee</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Designation</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+        <div id="modal-container">
+            <div id="modal-content">
+              <span class="close-btn" onclick="closeModal()">&times;</span>
+              <div id="employee-details"></div>
+            </div>
+          </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
